@@ -8,6 +8,10 @@ import { NavbarLinkComponent } from './components/navbar-link/navbar-link.compon
 import { PersonalInformationComponent } from './components/personal-information/personal-information.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import {WindowService} from "./services/window.service";
+import {StoreModule} from "@ngrx/store";
+import {appReducer} from "./state/reducers/app.reducer";
+import {CommonModule} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -20,9 +24,11 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    AppRoutingModule,
+    StoreModule.forRoot({ app: appReducer })
   ],
-  providers: [],
+  providers: [WindowService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

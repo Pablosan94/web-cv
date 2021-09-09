@@ -27,5 +27,13 @@ i {
 
 .active {
   color: hsl(220, 60%, 60%);
+  outline: none;
   transition: color 350ms ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1rem;
+    white-space: nowrap;
+  }
 }

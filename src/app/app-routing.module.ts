@@ -6,13 +6,16 @@ import {SkillsComponent} from "./components/skills/skills.component";
 
 const routes: Routes = [
   {
-    path: 'personal-information', component: PersonalInformationComponent
+    path: 'personal-information',
+    component: PersonalInformationComponent
   },
   {
-    path: 'skills', component: SkillsComponent
+    path: 'skills',
+    component: SkillsComponent
   },
   {
-    path: 'work-experience', component: WorkExperienceComponent
+    path: 'work-experience',
+    component: WorkExperienceComponent
   }
 ];
 
