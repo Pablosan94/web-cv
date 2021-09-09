@@ -1,0 +1,31 @@
+i {
+  font-size: 1.5rem;
+  margin-right: .25rem;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-family: "Fira Code", sans-serif;
+  font-weight: lighter;
+}
+
+.navbar-link {
+  align-items: center;
+  color: hsl(0, 0%, 95%);
+  display: flex;
+  transition: color 350ms ease;
+
+  &:hover:not(.active) {
+    color: hsl(0, 0%, 70%);
+    cursor: pointer;
+  }
+
+  &:hover.active {
+    cursor: default;
+  }
+}
+
+.active {
+  color: hsl(220, 60%, 60%);
+  transition: color 350ms ease-in-out;
+}

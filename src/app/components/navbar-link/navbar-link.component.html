@@ -1,0 +1,6 @@
+<div class="navbar-link"
+     routerLink="{{ '/' + link.title.toLowerCase().replace(' ', '-') }}"
+     routerLinkActive="active">
+  <i class="bx" #icon *ngIf="link.iconClass"></i>
+  <span class="title">{{ link.title }}</span>
+</div>
