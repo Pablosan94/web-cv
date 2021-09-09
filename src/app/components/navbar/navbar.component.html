@@ -7,5 +7,6 @@
 <ng-template #menuBlock>
   <i class="bx bx-menu menu" (click)="menuToggled()" #menu></i>
   <div class="menu-content" *ngIf="isMenuToggled" #menuContent>
+    <app-navbar-link class="link" [link]="link" *ngFor="let link of links" (onLinkClick)="onLinkClicked()"></app-navbar-link>
   </div>
 </ng-template>

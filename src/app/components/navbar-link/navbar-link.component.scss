@@ -5,8 +5,8 @@ i {
 
 .title {
   font-size: 1.25rem;
-  font-family: "Fira Code", sans-serif;
-  font-weight: lighter;
+  font-family: Urbanist, sans-serif;
+  font-weight: 300;
 }
 
 .navbar-link {
@@ -29,11 +29,4 @@ i {
   color: hsl(220, 60%, 60%);
   outline: none;
   transition: color 350ms ease-in-out;
-}
-
-@media screen and (max-width: 768px) {
-  .title {
-    font-size: 1rem;
-    white-space: nowrap;
-  }
 }

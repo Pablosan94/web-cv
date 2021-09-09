@@ -1,4 +1,14 @@
-import {AfterViewInit, Component, ElementRef, Input, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  Input,
+  OnInit,
+  Output,
+  Renderer2,
+  ViewChild
+} from '@angular/core';
 import {NavbarLinkModel} from "../../models/navbar-link.model";
 
 @Component({
@@ -14,11 +24,18 @@ export class NavbarLinkComponent implements AfterViewInit {
   // @ts-ignore
   public link: NavbarLinkModel;
 
+  @Output()
+  public onLinkClick: EventEmitter<void> = new EventEmitter<void>();
+
   constructor(private renderer: Renderer2) { }
 
   ngAfterViewInit(): void {
     if (this.link.iconClass) {
       this.renderer.addClass(this.icon.nativeElement, this.link.iconClass);
     }
+  }
+
+  public linkClicked(): void {
+    this.onLinkClick.emit();
   }
 }

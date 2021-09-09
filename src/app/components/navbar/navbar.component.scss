@@ -16,7 +16,7 @@
   .menu {
     color: hsl(0, 0%, 95%);
     font-size: 3rem;
-    transition: all 500ms ease-in-out;
+    transition: all 350ms ease;
 
     &.active {
       color: hsl(0, 0%, 70%);
@@ -27,13 +27,15 @@
   .menu-content {
     animation-name: menuAnimation;
     animation-duration: 500ms;
-    background-color: hsl(0, 0%, 30%);
-    height: 128px;
+    background-color: hsla(0, 0%, 30%, 95%);
+    display: flex;
+    flex-flow: column;
     left: 0;
     position: absolute;
     top: 64px;
-    transition: all 500ms ease;
-    width: 100%;
+    transition: all 200ms ease;
+    width: max-content;
+    z-index: 2;
   }
 
   .navbar {
@@ -49,18 +51,6 @@
     to {
       opacity: 1;
       top: 64px;
-    }
-  }
-
-  @keyframes menuAnimationReverse {
-    from {
-      opacity: 1;
-      top: 64px;
-    }
-
-    to {
-      opacity: 0;
-      top: 16px;
     }
   }
 }

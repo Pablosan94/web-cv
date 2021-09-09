@@ -46,4 +46,8 @@ export class NavbarComponent implements OnInit {
     }
     this.isMenuToggled = !this.isMenuToggled;
   }
+
+  onLinkClicked() {
+    this.menuToggled();
+  }
 }
