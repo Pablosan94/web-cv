@@ -12,6 +12,9 @@ import {WindowService} from "./services/window.service";
 import {StoreModule} from "@ngrx/store";
 import {appReducer} from "./state/reducers/app.reducer";
 import {CommonModule} from "@angular/common";
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
+import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
   declarations: [
@@ -20,13 +23,16 @@ import {CommonModule} from "@angular/common";
     NavbarLinkComponent,
     PersonalInformationComponent,
     SkillsComponent,
-    WorkExperienceComponent
+    WorkExperienceComponent,
+    ContactComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     CommonModule,
     AppRoutingModule,
-    StoreModule.forRoot({ app: appReducer })
+    StoreModule.forRoot({ app: appReducer }),
+    SharedModule
   ],
   providers: [WindowService],
   bootstrap: [AppComponent]

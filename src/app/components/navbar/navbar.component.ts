@@ -27,6 +27,9 @@ export class NavbarComponent implements OnInit {
     },
     {
       title: 'Work experience'
+    },
+    {
+      title: 'Contact'
     }
   ];
 
