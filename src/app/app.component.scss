@@ -1,1 +1,26 @@
+.welcome {
+  align-items: center;
+  color: hsl(0, 0%, 25%);
+  display: flex;
+  font-family: Poppins, sans-serif;
+  font-size: 8rem;
+  font-weight: 800;
+  height: calc(100vh - 80px - 64px);
 
+  .text {
+    animation: fadeIn 1.5s ease-in-out;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

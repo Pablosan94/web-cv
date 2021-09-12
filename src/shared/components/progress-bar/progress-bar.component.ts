@@ -7,6 +7,8 @@ import {Component, HostBinding, Input, OnInit} from '@angular/core';
 })
 export class ProgressBarComponent implements OnInit {
   @Input()
+  public title: string = '';
+  @Input()
   public percent: number = 0;
 
   public currentPercent: number = 0;

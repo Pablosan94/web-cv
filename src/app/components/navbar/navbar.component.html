@@ -1,12 +1,12 @@
 <div class="navbar">
   <ng-container *ngIf="!(isMobile$ | async); else menuBlock">
-    <app-navbar-link class="link" [link]="link" *ngFor="let link of links"></app-navbar-link>
+    <app-navbar-link class="link" [link]="link" *ngFor="let link of links" (click)="onLinkClicked(link.title)"></app-navbar-link>
   </ng-container>
 </div>
 
 <ng-template #menuBlock>
   <i class="bx bx-menu menu" (click)="menuToggled()" #menu></i>
   <div class="menu-content" *ngIf="isMenuToggled" #menuContent>
-    <app-navbar-link class="link" [link]="link" *ngFor="let link of links" (onLinkClick)="onLinkClicked()"></app-navbar-link>
+    <app-navbar-link class="link" [link]="link" *ngFor="let link of links" (onLinkClick)="onLinkClickedMobile(link.title)"></app-navbar-link>
   </div>
 </ng-template>

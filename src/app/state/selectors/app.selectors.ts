@@ -5,3 +5,4 @@ export const getAppState: MemoizedSelector<any, AppState> = createFeatureSelecto
 
 export const getWindowSize: MemoizedSelector<any, number> = createSelector(getAppState, ({ windowSize }) => windowSize);
 export const getIsMobile: MemoizedSelector<any, boolean> = createSelector(getAppState, ({ isMobile }) => isMobile);
+export const getCurrentRoute: MemoizedSelector<any, string> = createSelector(getAppState, ({ currentRoute }) => currentRoute);

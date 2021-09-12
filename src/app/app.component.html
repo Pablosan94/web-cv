@@ -1,3 +1,8 @@
 <app-navbar></app-navbar>
+<div class="welcome" *ngIf="!(currentRoute$ | async)">
+  <div class="text">
+    {{ 'Welcome' | uppercase }}
+  </div>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

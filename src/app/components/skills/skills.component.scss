@@ -1,12 +1,47 @@
+.header {
+  align-items: center;
+  display: flex;
+}
+
+.icon {
+  background-color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 20%);
+  border-radius: 50%;
+  color: hsl(0, 0%, 20%);
+  font-size: 1.25rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  width: 2rem;
+  z-index: 2;
+}
+
+.title {
+  background-color: hsl(0, 0%, 85%);
+  color: hsl(0, 0%, 20%);
+  font-family: Poppins, sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-left: -1rem;
+  padding-left: 1.5rem;
+  width: 100%;
+}
+
 .content {
   animation: fadeIn 800ms ease-in-out;
   font-family: Nunito, sans-serif;
   font-weight: 500;
+  height: calc(100vh - 64px - 80px);
   padding: 1rem;
+  overflow: scroll;
 }
 
-app-progress-bar {
-  margin: 0rem 1rem;
+.skill-group {
+  border-bottom: 2px solid hsl(0, 0%, 20%);
+  border-bottom-left-radius: 1rem;
+  border-left: 2px solid hsl(0, 0%, 20%);
+  margin-left: 0.9rem;
+  padding: 0.25rem 0 1rem 1.5rem;
 }
 
 @keyframes fadeIn {

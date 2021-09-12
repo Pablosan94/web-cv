@@ -1,19 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
-import { NavbarLinkComponent } from './components/navbar-link/navbar-link.component';
-import { PersonalInformationComponent } from './components/personal-information/personal-information.component';
-import { SkillsComponent } from './components/skills/skills.component';
-import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import {AppRoutingModule} from './app-routing.module';
+import {AppComponent} from './app.component';
+import {NavbarComponent} from './components/navbar/navbar.component';
+import {NavbarLinkComponent} from './components/navbar-link/navbar-link.component';
+import {PersonalInformationComponent} from './components/personal-information/personal-information.component';
+import {SkillsComponent} from './components/skills/skills.component';
+import {WorkExperienceComponent} from './components/work-experience/work-experience.component';
 import {WindowService} from "./services/window.service";
 import {StoreModule} from "@ngrx/store";
 import {appReducer} from "./state/reducers/app.reducer";
 import {CommonModule} from "@angular/common";
-import { ContactComponent } from './components/contact/contact.component';
-import { FooterComponent } from './components/footer/footer.component';
+import {FooterComponent} from './components/footer/footer.component';
 import {SharedModule} from "../shared/shared.module";
 
 @NgModule({
@@ -24,7 +23,6 @@ import {SharedModule} from "../shared/shared.module";
     PersonalInformationComponent,
     SkillsComponent,
     WorkExperienceComponent,
-    ContactComponent,
     FooterComponent
   ],
   imports: [

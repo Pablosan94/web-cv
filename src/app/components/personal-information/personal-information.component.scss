@@ -8,8 +8,8 @@
 
 .content {
   display: flex;
-  padding-left: 20%;
-  padding-right: 20%;
+  padding-left: 10%;
+  padding-right: 10%;
   height: 100%;
   z-index: 3;
 }
@@ -17,30 +17,30 @@
 .left {
   align-items: center;
   background-color: hsl(0, 0%, 80%);
-  box-shadow: 8px 0 32px hsl(0, 0%, 40%, 10%);
+  box-shadow: 2px 0 4px hsl(0, 0%, 40%, 5%);
   display: flex;
   flex-flow: column;
   padding: 3rem;
-  width: 25%;
+  width: 40%;
   z-index: 2;
 
   .picture {
-    background-color: hsl(0, 0%, 90%);
-    background-image: url("/assets/profile.png");
+    background: hsl(0, 0%, 90%) url('/assets/chikito.png');
     background-size: cover;
     border: 4px solid hsl(0, 0%, 90%);
     border-radius: 50%;
     height: auto;
     margin-bottom: 3rem;
-    padding-top: 100%;
-    width: 100%;
+    padding-top: 70%;
+    width: 70%;
   }
 
   .contact-info {
-    color: hsl(0, 0%, 95%);
+    align-items: flex-start;
+    color: hsl(0, 0%, 30%);
     display: flex;
     flex-flow: column;
-    width: 100%;
+    width: min-content;
 
     &__header {
       font-family: Urbanist, serif;
@@ -49,22 +49,127 @@
     }
 
     &__content {
+      align-items: center;
+      display: flex;
       font-family: Nunito, serif;
-      font-size: 0.85rem;
+      font-size: 3rem;
       font-weight: 800;
 
-      i {
-
+      &__text {
+        font-size: 1.25rem;
+        margin-left: 1rem;
       }
     }
   }
 }
 
 .right {
-  background-color: hsl(0, 0%, 90%);
-  height: 100%;
-  width: 75%;
+  background-color: hsl(0, 0%, 92%);
+  padding: 3rem;
+  width: 60%;
+  overflow: scroll;
   z-index: 1;
+
+  .header {
+    margin-bottom: 3rem;
+
+    .name {
+      color: hsl(0, 0%, 30%);
+      font-family: Poppins, sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      letter-spacing: 0.0625rem;
+    }
+
+    .job-title {
+      color: hsl(0, 0%, 30%);
+      font-family: Nunito, sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+  }
+
+  .information-group {
+    font-family: Urbanist, sans-serif;
+    font-weight: 400;
+    margin-bottom: 4rem;
+  }
+
+  .skip-intro {
+    animation: fadeIn 800ms ease-in-out 5s;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0.25rem;
+    font-family: Poppins, sans-serif;
+    font-weight: 700;
+    margin: 0 auto;
+    padding: 0.25rem 1rem;
+    opacity: 0;
+    white-space: nowrap;
+    width: min-content;
+    visibility: hidden;
+
+    &:hover {
+      background-color: hsl(0, 0%, 82%);
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .left {
+    padding: 2rem 0.5rem;
+
+    .picture {
+      border: 2px solid hsl(0, 0%, 90%);
+      margin-bottom: 1rem;
+      padding-top: 80%;
+      width: 80%;
+    }
+
+    .contact-info {
+      align-items: flex-start;
+      margin-left: 1rem;
+
+      &__header {
+        font-size: 0.75rem;
+        margin: 0.25rem 0;
+      }
+
+      &__content {
+        font-size: 1rem;
+        margin: 0.25rem 0;
+
+        &__text {
+          font-size: 0.5rem;
+          margin-left: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .right {
+    padding: 2rem 1rem;
+
+    .name {
+      color: hsl(0, 0%, 30%);
+      font-family: Poppins, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 900;
+      letter-spacing: 0.0625rem;
+    }
+
+    .job-title {
+      color: hsl(0, 0%, 30%);
+      font-family: Nunito, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
+  }
 }
 
 @keyframes fadeIn {

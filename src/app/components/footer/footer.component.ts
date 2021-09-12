@@ -1,4 +1,5 @@
-import {Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {Component, ElementRef, Renderer2, ViewChild} from '@angular/core';
+import {WindowService} from "../../services/window.service";
 
 @Component({
   selector: 'app-footer',
@@ -11,5 +12,14 @@ export class FooterComponent {
   // @ts-ignore
   @ViewChild('mail') mailRef: ElementRef;
 
-  constructor(private renderer: Renderer2) { }
+  constructor(private renderer: Renderer2,
+              private windowService: WindowService) { }
+
+  linkedInClicked() {
+    this.windowService.navigate('https://www.linkedin.com/in/pabsanji/');
+  }
+
+  mailClicked() {
+    this.windowService.navigate('https://mail.google.com/mail/u/0/?view=cm&fs=1&to=pabsanji@gmail.com');
+  }
 }

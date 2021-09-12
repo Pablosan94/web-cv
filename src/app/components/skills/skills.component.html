@@ -1,9 +1,44 @@
 <div class="content">
-  Skills
-  <app-progress-bar [percent]="32"></app-progress-bar>
-  <app-progress-bar [percent]="51"></app-progress-bar>
-  <app-progress-bar [percent]="79"></app-progress-bar>
-  <app-progress-bar [percent]="20"></app-progress-bar>
-  <app-progress-bar [percent]="100"></app-progress-bar>
-  <app-progress-bar [percent]="5"></app-progress-bar>
+  <div class="header">
+    <div class="icon">
+      <i class="bx bx-code-alt"></i>
+    </div>
+    <div class="title">{{ 'IT skills' | uppercase }}</div>
+  </div>
+
+  <div class="skill-group">
+    <app-progress-bar [title]="'JavaScript'" [percent]="90"></app-progress-bar>
+    <app-progress-bar [title]="'HTML'" [percent]="90"></app-progress-bar>
+    <app-progress-bar [title]="'CSS'" [percent]="86"></app-progress-bar>
+    <app-progress-bar [title]="'Angular'" [percent]="88"></app-progress-bar>
+  </div>
+
+  <br>
+
+  <div class="header">
+    <div class="icon">
+      <i class="bx bx-bulb"></i>
+    </div>
+    <div class="title">{{ 'Soft skills' | uppercase }}</div>
+  </div>
+
+  <div class="skill-group">
+    <app-progress-bar [title]="'Communication'" [percent]="80"></app-progress-bar>
+    <app-progress-bar [title]="'SCRUM'" [percent]="87"></app-progress-bar>
+  </div>
+
+  <br>
+
+  <div class="header">
+    <div class="icon">
+      <i class="bx bx-flag"></i>
+    </div>
+    <div class="title">{{ 'Languages' | uppercase }}</div>
+  </div>
+
+  <div class="skill-group">
+    <app-progress-bar [title]="'Spanish'" [percent]="100"></app-progress-bar>
+    <app-progress-bar [title]="'English'" [percent]="95"></app-progress-bar>
+    <app-progress-bar [title]="'German'" [percent]="10"></app-progress-bar>
+  </div>
 </div>

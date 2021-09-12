@@ -4,11 +4,13 @@ import {AppActions} from "../actions/app.actions";
 export interface AppState {
   windowSize: number;
   isMobile: boolean;
+  currentRoute: string;
 }
 
 export const initialState: AppState = {
   windowSize: -1,
-  isMobile: false
+  isMobile: false,
+  currentRoute: ''
 }
 
 const _appReducer = createReducer(
@@ -18,6 +20,10 @@ const _appReducer = createReducer(
     ...state,
     windowSize: size,
     isMobile: size < 768
+  })),
+  on(AppActions.navigateTo, (state, { route }) => ({
+    ...state,
+    currentRoute: route
   }))
 );
 

@@ -1,6 +1,7 @@
 <div class="navbar-link"
      routerLink="{{ '/' + link.title.toLowerCase().replace(' ', '-') }}"
      routerLinkActive="active"
+     [skipLocationChange]="true"
      (click)="linkClicked()">
   <i class="bx" #icon *ngIf="link.iconClass"></i>
   <span class="title">{{ link.title }}</span>

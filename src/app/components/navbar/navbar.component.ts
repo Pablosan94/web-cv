@@ -3,6 +3,8 @@ import {NavbarLinkModel} from "../../models/navbar-link.model";
 import {select, Store} from "@ngrx/store";
 import {Observable} from "rxjs";
 import {getIsMobile} from "../../state/selectors/app.selectors";
+import {ActivatedRoute} from "@angular/router";
+import {AppActions} from "../../state/actions/app.actions";
 
 @Component({
   selector: 'app-navbar',
@@ -27,15 +29,14 @@ export class NavbarComponent implements OnInit {
     },
     {
       title: 'Work experience'
-    },
-    {
-      title: 'Contact'
     }
   ];
 
   public isMenuToggled: boolean = false;
 
-  constructor(private store: Store, private renderer: Renderer2) {}
+  constructor(private store: Store,
+              private renderer: Renderer2,
+              private activatedRoute: ActivatedRoute) {}
 
   public ngOnInit(): void {
     this.isMobile$ = this.store.pipe(select(getIsMobile));
@@ -50,7 +51,14 @@ export class NavbarComponent implements OnInit {
     this.isMenuToggled = !this.isMenuToggled;
   }
 
-  onLinkClicked() {
+  onLinkClickedMobile(route: string) {
+    const toRoute: string = route.toLowerCase().replace(' ', '-');
+    this.store.dispatch(AppActions.navigateTo({ route: toRoute }));
     this.menuToggled();
+  }
+
+  onLinkClicked(route: string) {
+    const toRoute: string = route.toLowerCase().replace(' ', '-');
+    this.store.dispatch(AppActions.navigateTo({ route: toRoute }));
   }
 }

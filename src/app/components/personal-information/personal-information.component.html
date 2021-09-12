@@ -1,24 +1,46 @@
 <div class="container">
   <div class="content">
     <div class="left">
-      <div class="picture" [ngStyle]="{'background-image': 'url(assets/profile.png)'}">
+      <div class="picture">
       </div>
       <div class="contact-info">
-        <div class="contact-info__header">CONTACT</div>
         <div class="contact-info__content">
-          <i></i>
-          location
+          <i class="bx bx-map"></i>
+          <div class="contact-info__content__text">Madrid, Spain</div>
         </div>
         <div class="contact-info__content">
-          <i></i>
-          phone number
+          <i class="bx bx-phone" ></i>
+          <div class="contact-info__content__text">+34 652 145 835</div>
         </div>
         <div class="contact-info__content">
-          <i></i>
-          email
+          <i class="bx bx-mail-send" ></i>
+          <div class="contact-info__content__text">pabsanji@gmail.com</div>
         </div>
       </div>
     </div>
-    <div class="right"></div>
+    <div class="right">
+      <div class="header">
+        <div class="name">{{ 'Pablo Sanchez' | uppercase }}</div>
+        <div class="job-title">{{ 'Frontend Developer' | uppercase }}</div>
+      </div>
+
+      <div class="information-group">
+        Hi, my name is Pablo Sánchez.
+        <br><br>
+        I was born in Valencia on March 15th, 1994 (currently {{ age }} years old).
+        <br><br>
+        When I was 5 years old, me and my family moved for a year to Berkeley in the US, where I was lucky enough to pick up on the language since a very young age.
+        <br><br>
+        Computers have been in my life since I can remember and I have always found them very useful and interesting, which is why I chose Computer Science as my career path.
+        <br><br>
+        After going through many different hobbies in my teenage years, the one I'm most passionate about is making music and I can play piano, bass, guitar, drums and occasionally sing.
+        <br><br>
+        Currently, I live in Madrid with my girlfriend and our {{ catAge }} year old cat.
+      </div>
+
+      <div class="skip-intro" #skipIntro (click)="onSkipIntro()">
+        SKIP INTRO
+      </div>
+    </div>
   </div>
 </div>
