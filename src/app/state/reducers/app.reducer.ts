@@ -19,7 +19,7 @@ const _appReducer = createReducer(
   on(AppActions.setWindowSize, (state, { size }) => ({
     ...state,
     windowSize: size,
-    isMobile: size < 768
+    isMobile: size <= 768
   })),
   on(AppActions.navigateTo, (state, { route }) => ({
     ...state,

@@ -21,18 +21,17 @@
   display: flex;
   flex-flow: column;
   padding: 3rem;
-  width: 40%;
   z-index: 2;
 
   .picture {
     background: hsl(0, 0%, 90%) url('/assets/chikito.png');
     background-size: cover;
-    border: 4px solid hsl(0, 0%, 90%);
+    border: 2px solid hsl(0, 0%, 90%);
     border-radius: 50%;
     height: auto;
     margin-bottom: 3rem;
-    padding-top: 70%;
-    width: 70%;
+    padding-top: 100%;
+    width: 100%;
   }
 
   .contact-info {
@@ -66,7 +65,7 @@
 .right {
   background-color: hsl(0, 0%, 92%);
   padding: 3rem;
-  width: 60%;
+  width: 100%;
   overflow: scroll;
   z-index: 1;
 
@@ -76,7 +75,7 @@
     .name {
       color: hsl(0, 0%, 30%);
       font-family: Poppins, sans-serif;
-      font-size: 3rem;
+      font-size: calc(100vw - (100vw * 0.96));
       font-weight: 900;
       letter-spacing: 0.0625rem;
     }
@@ -84,7 +83,7 @@
     .job-title {
       color: hsl(0, 0%, 30%);
       font-family: Nunito, sans-serif;
-      font-size: 1rem;
+      font-size: calc(100vw - (100vw * 0.98));
       font-weight: 600;
     }
   }
@@ -155,19 +154,23 @@
   .right {
     padding: 2rem 1rem;
 
-    .name {
-      color: hsl(0, 0%, 30%);
-      font-family: Poppins, sans-serif;
-      font-size: 1.25rem;
-      font-weight: 900;
-      letter-spacing: 0.0625rem;
-    }
+    .header {
+      margin-bottom: 2rem;
 
-    .job-title {
-      color: hsl(0, 0%, 30%);
-      font-family: Nunito, sans-serif;
-      font-size: 0.75rem;
-      font-weight: 500;
+      .name {
+        color: hsl(0, 0%, 30%);
+        font-family: Poppins, sans-serif;
+        font-size: calc(100vw - (100vw * 0.95));
+        font-weight: 900;
+        letter-spacing: 0.0625rem;
+      }
+
+      .job-title {
+        color: hsl(0, 0%, 30%);
+        font-family: Nunito, sans-serif;
+        font-size: calc(100vw - (100vw * 0.97));
+        font-weight: 500;
+      }
     }
   }
 }
